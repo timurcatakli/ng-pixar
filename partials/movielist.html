@@ -1,0 +1,88 @@
+  <div class="container has-text-centered">
+        
+        <!-- Filter form starts here -->
+        <div class="columns">
+          <div class="column notification is-info is-bold">
+            <!-- Main container -->
+            <nav class="level">
+              <!-- Left side -->
+              <div class="level-left">
+                <div class="level-item">
+                  <p class="subtitle is-5">
+                    <strong>{{ movies.length }}</strong> movies
+                  </p>
+                </div>
+                <div class="level-item">
+                  <p class="control has-addons">
+                    <input class="input" type="text" placeholder="Filter by keyword" ng-model="query.Title">
+                  </p>
+                </div>
+                <div class="level-item">
+                  <p class="control has-addons">
+                    <span class="select">
+                      <select ng-model="orderProp">
+                        <option value="Year">Year</option>
+                        <option value="-Year">Year Desc</option>
+                        <option value="age">Newest</option>
+                        <option value="-age">Oldest</option>
+                      </select>
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Right side -->
+              <div class="level-right">
+                <p class="level-item"><strong>All</strong></p>
+                <p class="level-item"><a>Published</a></p>
+                <p class="level-item"><a>Drafts</a></p>
+                <p class="level-item"><a>Deleted</a></p>
+                <p class="level-item"><a class="button is-success">New</a></p>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <div class="columns is-multiline">
+          <div class="column is-one-quarter movie-listing" ng-repeat="movie in movies | filter:query | orderBy: orderProp">
+            <div class="box">
+              <article class="media">
+                <div class="media-content">
+              <div class="">
+                <figure class="image is-245x326">
+                  <a href="#/movie/{{ movie.imdbID }}/{{ movie.Title }}"><img ng-src="{{ movie.Poster }}" alt=""></a>
+                </figure>
+              </div>
+
+                  <div class="content" style="text-align: center;">
+                    <h1>{{ movie.Title }}</h1>
+                    <p class="" style="color: red;">
+                      <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                      <br>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                    </p>
+                  </div>
+                  <nav class="level">
+                    <div class="level-left">
+                      <a class="level-item">
+                        <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                      </a>
+                      <a class="level-item">
+                        <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                      </a>
+                      <a class="level-item">
+                        <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                      </a>
+                    </div>
+                  </nav>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </div>
+        
+
+
+
+      </div>

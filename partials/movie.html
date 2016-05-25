@@ -1,0 +1,147 @@
+<div class="container has-text-centered">
+  <div class="columns is-mobile">
+    <div class="column">
+      <figure class="image">
+        <img src="{{ movie.Cover }}" alt="{{ movie.Title }}">
+      </figure>
+    </div>
+  </div>
+  <div class="columns is-mobile is-2">
+    <div class="column">
+      <figure class="image">
+        <img src="{{ movie.Poster }}" alt="{{ movie.Title }}">
+      </figure>
+    </div>
+    <div class="column is-5">
+      <div class="content has-text-left">
+        <h1>{{ movie.Title }}</h1>
+        <p>{{ movie.Plot }}</p>
+        <h2>Team</h2>
+        <div class="columns">
+          <div class="column is-2">
+            <strong>Director:</strong> 
+          </div>
+          <div class="column is-10">
+            {{ movie.Director }}
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-2">
+            <strong>Writer:</strong> 
+          </div>
+          <div class="column is-10">
+            {{ movie.Writer }}
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-2">
+            <strong>Actors:</strong> 
+          </div>
+          <div class="column is-10">
+            {{ movie.Actors }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column is-5">
+      <div class="content has-text-left">
+        <h1>&nbsp;</h1>
+        <div class="columns">
+          <div class="column">
+            <strong>Year:</strong> 
+          </div>
+          <div class="column">
+            {{ movie.Year }}
+          </div>
+          <div class="column">
+            <strong>Rated:</strong> 
+          </div>
+          <div class="column">
+            {{ movie.Rated }}
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <strong>Released:</strong> 
+          </div>
+          <div class="column">
+            {{ movie.Released }}
+          </div>
+          <div class="column">
+            <strong>Runtime:</strong> 
+          </div>
+          <div class="column">
+            {{ movie.Runtime }}
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <strong>Genre:</strong> 
+          </div>
+          <div class="column">
+            {{ movie.Genre }}
+          </div>
+          <div class="column">
+            <strong>Language:</strong> 
+          </div>
+          <div class="column">
+            {{ movie.Language }}
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-3">
+            <strong>Awards:</strong> 
+          </div>
+          <div class="column">
+            {{ movie.Awards }}
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-3">
+            <strong>Metascore:</strong> 
+          </div>
+          <div class="column is-3">
+            {{ movie.Metascore }} / 100
+          </div>
+          <div class="column">
+            <progress class="progress is-warning" value="{{ movie.Metascore }}" max="100">{{ movie.Metascore }}</progress>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-3">
+            <strong>imdb Rating:</strong> 
+          </div>
+          <div class="column is-3">
+            {{ movie.imdbRating }} / 10
+          </div>
+          <div class="column">
+            <progress class="progress is-warning" value="{{ movie.imdbRating }}" max="10">{{ movie.imdbRating }}</progress>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="columns is-mobile">
+    <div class="column">
+      <div class="columns is-mobile">
+        <div class="column"  ng-repeat="img in movie.Images">
+          <figure class="image">
+            <img ng-src="{{ img }}" ng-mouseenter="setImage(img)" alt="{{ movie.Title }}" class="ng-src">
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="column is-8 movie-images">
+    
+      <figure class="image">
+        <img
+          ng-src="{{ img }}"
+          class="movie"
+          ng-class="{active:mainImageUrl==img}"
+          ng-repeat="img in movie.Images"
+          alt="{{ movie.Title }}">
+      </figure>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="pixarApp">
+<head>
+  <title>Bulma Test</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.26/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animations.css">
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+
+
+
+  <section class="hero is-success is-fullheight is-bold">
+    <!-- Hero header: will stick at the top -->
+    <div class="hero-head">
+      <header class="nav">
+        <div class="container">
+          <div class="nav-left">
+            <a class="nav-item"><img src="http://bulma.io/images/bulma-white.png" alt="Logo"></a>
+          </div>
+          <span class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <div class="nav-right nav-menu">
+            <a href="#/" class="nav-item is-active">
+              Home
+            </a>
+            <a class="nav-item">
+              Examples
+            </a>
+            <a class="nav-item">
+              Documentation
+            </a>
+            <span class="nav-item">
+              <a class="button is-success is-inverted">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+                <span>Download</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body view-frame" ng-view></div>
+
+    <!-- Hero footer: will stick at the bottom -->
+    <div class="hero-foot">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+          </p>
+          <p>
+            <a class="icon" href="https://github.com/jgthms/bulma">
+              <i class="fa fa-github"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> 
+  <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+  <script src="https://code.angularjs.org/1.5.5/angular-resource.min.js"></script>
+  <script src="https://code.angularjs.org/1.5.5/angular-animate.min.js"></script>
+  
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

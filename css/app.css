@@ -1,0 +1,15 @@
+.movie-images {
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+img.movie {
+ display: none;
+}
+
+img.movie:first-child {
+  display: block;
+  }
